@@ -5,19 +5,19 @@ import WeatherDisplay from "./WeatherDisplay";
 const App = () => {
 
   const WeatherDisplayData = {
-    temperature: "25°C",
+    temperature: 25,
     conditions: "Sunny",
   };
 
-  const [weatherData, setWeatherData] = React.useState(WeatherDisplayData);
+  const [weatherData] = React.useState(WeatherDisplayData);
 
   return (
     <div>
       {/* Do not remove the main div */}
 
       <WeatherDisplay
-        temperature={WeatherDisplayData.temperature}
-        conditions={WeatherDisplayData.conditions}
+        temperature={weatherData.temperature}
+        conditions={weatherData.conditions}
       />
     </div>
   )
